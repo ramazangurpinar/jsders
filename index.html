@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html"; charset="utf-8"  />
+<title> JavaScript'e Başlangıç! </title>
+
+<script type="text/javascript" src="js/cp1.js"> </script> <!-- DERS 1 // EKRANA YAZI YAZDIRMA  -->
+<script type="text/javascript" src="js/cp2.js"> </script> <!-- DERS 2 // ALERT // UYARI MESAJI  -->
+<script type="text/javascript" src="js/cp3.js"> </script> <!-- DERS 3 // EKRANDAKİ YAZIYI TIKLATARAK DEĞİŞTİRME  -->
+<script type="text/javascript" src="js/cp4.js"> </script> <!-- DERS 4 // IŞIĞI AÇ KAPAT -->
+<script type="text/javascript" src="js/cp5.js"> </script> <!-- DERS 5 // STİL DEĞİŞTİRME -->
+
+
+</head>
+
+<body>
+<noscript> JavaScript'i kapattınız! Bu sayfayı aktif bir şekilde kullanmak için yeniden açınız! </noscript> <!-- DERS 2 // JS KAPATILINCA EKRANDA OLUŞAN MESAJ  -->
+<p id="p1">FENERBAHÇE</p>
+<input type="button" onclick="pr1();" value="Click 1">
+<input type="button" onclick="pr2();" value="Click 2">
+<input type="button" onclick="pr3();" value="Back">
+<!-- DERS 3 // id(kimliği) p1 olan paragrafı çağır Click 1 değeri olan butona tıklatınca pr1 fornksiyonu
+ çalışsın  -->
+<br>
+<br>												<!-- DERS 4 // ışığı aç kapat -->
+ <img id="light" src="img/off.png">
+ <br>
+ <input type="button"  onclick="openLight()" value="Işığı Aç" >
+ <input type="button"  onclick="closeLight()" value="Işığı Kapat" >
+<br>
+
+<p id='stil'> Tıklatılınca İstediğimiz Renge Dönüşmeli </p>
+<button type="button" onclick="renkDegistir('red')"> Kırmızı </button>
+<button type="button" onclick="renkDegistir('yellow')"> Sarı </button>
+<button type="button" onclick="renkDegistir('blue')"> Mavi </button>
+<br>
+
+
+</body>
+
+</html>
