@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"  />
+<title> JavaScript'e Başlangıç! </title>
+
+</head>
+
+<body>
+<script>
+function Addition(data1,data2) {
+  return data1+data2;
+}
+function Substruction(data1,data2) {
+  return data1-data2;
+}
+function Calculate(p1,p2) {
+  return Addition(p1,p2)*Substruction(p1,p2);
+}
+function printAnswer(sendMe) {
+window.alert(sendMe); //Ekrana Basma şekillerini değiştirebiliriz.
+}
+printAnswer(Calculate(9,2)+"\n"+Calculate(8,5)+"\n"+Calculate(7,5)+"\n"+Calculate(12,10));
+printAnswer(Calculate(2,4));
+
+</script>
+
+</body>
+
+</html>

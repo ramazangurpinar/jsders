@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"  />
+<title> JavaScript'e Başlangıç! </title>
+
+</head>
+
+<body>
+
+  <p id="result">SONUÇ BURAYA YAZILIR</p>
+  <button onclick="process()">TOYOTA COROLLA İÇİN TIKLA </button>
+
+<script>
+
+var carName="Toyota Corolla";
+
+cars();
+function cars() {
+  document.getElementById('result').innerHTML=carName;
+}
+
+function process() {
+  window.alert(carName+"\n"+"Bu Değişkeni ben de kullandım ");
+
+}
+</script>
+
+</body>
+
+</html>

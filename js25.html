@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"  />
+<title> JavaScript'e Başlangıç! </title>
+
+</head>
+
+<body onload="printScreen4()">
+	
+	<button onclick="this.innerHTML='tek tıkladın ve değişti' "> TEK TIK </button>
+	<button ondblclick="this.innerHTML='çift tıkladın ve değişti'"> ÇİFT TIK </button> 
+	<p id="result" onmouseover="printScreen()" style="border:5px solid ; height:20px"  > MOUSE İLE ÜZERİNE GEL </p>
+	<p id="result2" onmouseout="printScreen2()" style="border:5px solid ; height:20px"  > MOUSE İLE ÜZERİNDEN ÇIK </p>
+	<p id="result3" onkeydown="printScreen3()">
+	 <input type="text" name="test"> </p>
+
+<script>
+//butonun içinde yazılanı değiştirme 
+	function printScreen() {
+		document.getElementById('result').innerHTML="Üzerine geldin ve değişti.";
+	}
+	function printScreen2() {
+		window.alert('Mouse ile üzerine geldikten sonra çıktın ve değişti');
+	}
+	function printScreen3() {
+		window.alert('Bana Tuşladınız');
+	}
+	function printScreen4() {
+		window.alert('SİTEMİZE HOŞGELDİNİZ..');	
+	}
+</script>
+
+</body>
+
+</html>

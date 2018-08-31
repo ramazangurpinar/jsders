@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html"; charset="utf-8"  />
+<meta charset="utf-8"  />
 <title> JavaScript'e Başlangıç! </title>
 
 <script type="text/javascript" src="js/cp1.js"> </script> <!-- DERS 1 // EKRANA YAZI YAZDIRMA  -->
@@ -9,8 +9,9 @@
 <script type="text/javascript" src="js/cp3.js"> </script> <!-- DERS 3 // EKRANDAKİ YAZIYI TIKLATARAK DEĞİŞTİRME  -->
 <script type="text/javascript" src="js/cp4.js"> </script> <!-- DERS 4 // IŞIĞI AÇ KAPAT -->
 <script type="text/javascript" src="js/cp5.js"> </script> <!-- DERS 5 // STİL DEĞİŞTİRME -->
-
-
+<script type="text/javascript" src="js/cp6.js"> </script>
+<!-- <script type="text/javascript" src="js/cp7.js"> </script> -->
+<script type="text/javascript" src="js/cp8.js"> </script>
 </head>
 
 <body>
@@ -29,12 +30,72 @@
  <input type="button"  onclick="closeLight()" value="Işığı Kapat" >
 <br>
 
-<p id='stil'> Tıklatılınca İstediğimiz Renge Dönüşmeli </p>
-<button type="button" onclick="renkDegistir('red')"> Kırmızı </button>
-<button type="button" onclick="renkDegistir('yellow')"> Sarı </button>
-<button type="button" onclick="renkDegistir('blue')"> Mavi </button>
+<p id='chngclr' style="color:blue"> Maviyi Kırmızı Yap </p>         <!-- DERS 6  renk -->
+<input type="button" onclick="chngrnk()" value="Kırmızı">
+
 <br>
 
+<p id='chngclr2' style="color:green"> Tıklatılınca İstediğimiz Renge Dönüşmeli </p>           <!-- DERS 5 rengini değiştirebilme -->
+<input type="button" onclick="renkDegistir('red')" value="Kırmızı" >
+<input type="button" onclick="renkDegistir('green')" value="BACK" >
+<input type="button" onclick="renkDegistir('blue')" value="Mavi" >
+
+<br>
+<br>
+
+<p id='prg1'> Sonuç Buraya Yazılacak</p>
+<br>
+<br>
+
+<p id='prg2'>T veya F dönecek </p>    <!-- DERS 9 BOOLEAN VERİ TÜRLERİ -->
+<input type="button" onclick="tf()" value="print run">
+
+<br>
+<br>
+
+<script>
+
+document.write("70.5" + "<br>" );   //JS alt satıra geçme
+
+var veritutucu;
+veritutucu="5";                                        // DERS 7  değişken tanımlama
+document.write(veritutucu);
+
+var veritutucu2;             //  DERS 7  değişkeni alert olarak kullanmak
+veritutucu2="Ramazan Gürpınar";
+alert(veritutucu2);
+
+document.write( " " + "<br>" )           //JS alt satıra geçme
+var a,b,sonuc;
+a=5;
+b=4;
+sonuc=a*b;          // DERS 8 aritmetik işlemler
+document.write(sonuc);
+
+document.write( " " + "<br>" )
+var isim,soyisim;
+isim="Ramazan";
+soyisim="Gürpınar";
+document.write("Adınız: "+isim,);
+document.write( "<br>")      //Ekrana isim soyisim YAZDIRMA
+document.write("Soyadınız: "+soyisim);
+document.write( "<br>")
+
+
+function print() {
+  var x,y,z,k;
+  x=3;
+  y=8;
+  z=(y-x)*6;
+  document.getElementById('prg1').innerHTML="Yeni Değerimiz: "+z;
+
+}
+print();
+document.write( "<br>")
+
+
+
+</script>
 
 </body>
 

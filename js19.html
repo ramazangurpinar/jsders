@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"  />
+<title> JavaScript'e Başlangıç! </title>
+
+</head>
+
+<body>
+  <p id="result"> </p>
+<script>
+var car={
+  name:"Kuki",
+  type:"Nissan",
+  model:"Red",
+  specialFunc: function () {
+    return this.type+"<br>"+this.model;
+    }
+  };
+document.getElementById('result').innerHTML=car.specialFunc();
+</script>
+
+</body>
+
+</html>

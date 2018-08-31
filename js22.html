@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"  />
+<title> JavaScript'e Başlangıç! </title>
+
+</head>
+
+<body>
+  <p id="result"></p>
+
+<script>
+cars();
+document.getElementById('result').innerHTML=carName;
+function cars() {
+  carName="Toyota";     //BU DEĞİŞKENİ GLOBAL OLARAK ALGILAR
+}                        //GENEL DEĞİŞKENLER OLUŞTURMAK PEK MANTIKLI OLMAZ
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"  />
+<title> JavaScript'e Başlangıç! </title>
+
+</head>
+
+<body>
+  <p id="result"> </p>
+
+<script>
+
+var car={
+  type:"Nissan",
+  model:"400A",
+  color:"Black"
+
+  };
+
+document.getElementById('result').innerHTML=(car.type+"<br>"+car.model);
+document.write(car.type+"<br>"+car.color+"<br>");
+document.write("<br>"+car["color"]+"<br>"+car["model"]);
+window.alert(car.color)
+
+</script>
+
+</body>
+
+</html>
