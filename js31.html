@@ -1,0 +1,25 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>form</title>
+<script type="text/javascript">
+function renkdegistir(){
+var adiniz = document.forms[0].adiniz.value;
+var zeminrengi = document.renkdegistirmeformu.renk.value;
+document.bgColor = zeminrengi;
+alert(adiniz + ", zemin rengini " + zeminrengi + " yaptınız.");
+}
+</script>
+</head>
+<body>
+<h1>Zemin rengi değiştirme</h1>
+<form name="renkdegistirmeformu">
+Adınız: <input type="text" name="adiniz"><br>
+Sayfayı ne renk yapmak istersin: <input type="text" name="renk"><br>
+İngilizce ismini girin..<br>
+<input type="button" value="Rengi Değiştir" onclick="renkdegistir();">
+</form>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"  />
+<title> JavaScript'e Başlangıç! </title>
+
+</head>
+
+<body>
+	<p id="result"></p>
+<script>
+		var txt="Ramazan Gürpınar Tarsus Anadolu Öğretmen Lisesinde okudu , bu Öğretmen Lisesi sonrasında Fen Lisesine dönüştü ancak ben Öğretmen olmayacağım.";
+		
+		document.getElementById('result').innerHTML=
+		
+		txt.indexOf("Öğretmen",33)+"<br>"+ // 33.karakterden sonra Öğretmen kelimesini ara 
+		txt.lastIndexOf("Öğretmen")+"<br>"+
+		txt.search("Öğretmen")+"<br>"+
+		txt.length; //text karakter uzunluğunu verir
+</script>
+
+</body>
+
+</html>
