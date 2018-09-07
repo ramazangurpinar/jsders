@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>		
+<meta charset="utf-8"  />
+<title> JavaScript'e Başlangıç! </title>
+	</head>
+
+	<body>
+		<div id="result" ></div>
+		<div id="result2" ></div>
+		<div id="result3" ></div>
+			<script>
+				var friends=[
+							"Hasan",
+							"Veli",
+							"Hüseyin",
+							"Mehmet"
+							];
+				document.getElementById('result').innerHTML=friends[1]+"<br>"+friends.length; 
+				// Dizilerde dizi elemanları bu şekilde çağrılır.
+				var abim={
+						  isim:"Hüseyin",
+						  soyisim:"Gürpınar",
+						  yas:"25",
+						  medeni_durum:"evli",
+						  memleket:"Aktoprak",
+						  meslek:"Ayakkabı"
+						};
+				document.getElementById('result2').innerHTML=abim.medeni_durum+"<br>"+abim.isim.length; // Nesnelerde isime kayıtlı değerler bu şekilde çağrılır.
+				document.getElementById('result3').innerHTML=abim["memleket"];  // Diziler  de birer nesne gibi davranır ki zaten typeof'u nesne döndürür. tırnak işaretine dikkat
+			</script>
+	</body>	
+</html>

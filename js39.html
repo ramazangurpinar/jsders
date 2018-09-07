@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"  />
+<title> JavaScript'e Başlangıç! </title>
+
+</head>
+
+<body>
+<p id="result"> </p>
+<script>
+var friends,text,i;
+friends=[
+		"Hasan",
+		"Mehmet",
+		"Veli",
+		"Hüseyin",
+		"Caner",
+		"Melih",
+		"Ertuğrul",
+		"Salih"
+		];
+
+text="<ol>";
+for(i=0;i<friends.length;i++){
+	text+="<li>"+friends[i]+"</li>";
+}
+text+="</ol>"
+
+document.getElementById('result').innerHTML=text;
+</script>
+
+</body>
+
+</html>
