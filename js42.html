@@ -7,8 +7,25 @@
 </head>
 
 <body>
-
+<button onclick="isArray()">TRY IT!</button>
+<p id="cevap"></p>
 <script>
+//ARRAY OLUP OLMADIĞINI SÖYLEYEN FONKSİYONUMUZU KENDİMİZ YAZALIM
+var friends=[
+			"Veli",
+			"Hüseyin"
+			];
+
+function isArray() {
+
+	var x=friends.constructor.toString().indexOf("Array");
+	// Aranılan kelime yoksa -1 döndürür.
+	if (x>-1){
+			document.getElementById('cevap').innerHTML="Bu bir Array'dir"; 
+		} else{
+			document.getElementById('cevap').innerHTML="Bu bir Array değildir";
+		}
+	}
 
 
 </script>

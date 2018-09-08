@@ -5,45 +5,248 @@
 <title> JavaScript'e Başlangıç! </title>
 <style>
 
+.kutu1 {
+		  border: solid 2px black;
+		  float: left;
+		  height: 318px;
+		  width: 170px;
+		  margin: 1px;
+		  padding: 1px;
+}
+.kutu2 {
+		  border: solid 2px black;
+		  float: left;
+		  height: 318px;
+		  width: 200px;
+		  margin: 1px;
+		  padding: 1px;
+}
+.kutu9 {
+		  border: solid 2px black;
+		  float: left;
+		  height: 318px;
+		  width: 200px;
+		  margin: 1px;
+		  padding: 1px;
+}
+.kutu3 {
+		  border: solid 2px black;
+		  float: left;
+		  height: 318px;
+		  width: 200px;
+		  margin: 1px;
+		  padding: 1px;
+}
+.kutu4 {
+		  border: solid 2px black;
+		  float: top;
+		  height: 55px;
+		  width: 184px;
+		  margin: 5px;
+		  padding: 1px;
+		  text-align: top;
+}
+.kutu5 {
+		  border: solid 2px black;
+		  float: top;
+		  height: 55px;
+		  width: 184px;
+		  margin: 5px;
+		  padding: 1px;
+}
+.kutu6 {
+		  border: solid 2px black;
+		  float: top;
+		  height: 55px;
+		  width: 184px;
+		  margin: 5px;
+		  padding: 1px;
+}
+
+.kutu7 {
+		  border: solid 2px black;
+		  float: top;
+		  height: 73px;
+		  width: 184px;
+		  margin: 5px;
+		  padding: 1px;
+}
+.kutu8 {
+		  border: solid 2px black;
+		  float: top;
+		  height: 15px;
+		  width: 184px;
+		  margin: 5px;
+		  padding: 1px;
+}
+
 </style>
 
 </head>
 	<body>
+		<div class="kutu1">
 			<form name="form"> 
 				<table name="table">
 					<tr>
-						<td colspan="2"><input style="width:128px;" name="textview">
+						<td colspan="2"><input style="width:125px;" name="textview">
 						</td>
 					</tr>
 					<tr>
-						<td colspan="2"><input style="width: 139px;"type="button" onclick="friendsAdd()" 
+						<td ><input style="width: 65px;"type="button" onclick="friendsAdd()" 
 						value="EKLE"></td>
+						<td ><input style="width: 65px;" type="button" onclick="friendsSubtraction()" 
+						value="ÇIKAR"></td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<input type="button" style="width:138px;" value="TEXT'İ SİL" onclick="deleteText()">
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<input type="button" style="width:138px;" value="BAŞA ÖGE EKLE" onclick="ilkElemanEkle()">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="button" style="width:68px;" value="(A-Z)" onclick="sırala()">
+						</td>
+						<td>
+							<input type="button" style="width:68px;" value="(Z-A)" onclick="sırala2()">
+						</td>
 					</tr>
 				</table>
 			</form>
-		<p id="textview2"></p>
+		</div>
+		
 
-		<script>
+		<div class="kutu3" style="text-align: center;" >
+
+			<div class="kutu4">
+				<p id="textview3" style="font-size: 15px" > </p>
+			</div>
+			<div class="kutu5">
+				<p id="textview4" style="font-size: 15px"> </p>
+			</div>
+			<div class="kutu6">
+				<p id="textview5" style="font-size: 15px"> </p>
+			</div>
+			<div class="kutu7">
+				<p id="textview6" style="font-size: 15px"> </p>
+			</div>
+			<div class="kutu8">
+				<p></p>
+			</div>
+		</div>
+
+		<div class="kutu2">
+			<p id="textview2"></p>
+		</div>
+
+		<div class="kutu9">
+			<p id="textview7"></p>
+		</div>
+
+	<script>
 
 var friends,text;
 
 friends=[
 		];
 
-function friendsAdd() {
-	var add=document.form.textview.value;
-	friends[friends.length]=add;
-	// friends.push(add);
-		text="<ol>";
+function sayi() {
 
+		var x=friends.push();
+		document.getElementById('textview3').innerHTML="Dizideki Eleman Sayısı"+"<br>"+x;
+
+}
+
+function sonDiziElemanı() {
+
+		var y= friends[friends.length-1];
+		document.getElementById('textview4').innerHTML="Dizideki Son Eleman"+"<br>"+y;
+
+}
+
+function ilkDiziElemanı() {
+
+		var z= friends[0];
+		document.getElementById('textview5').innerHTML="Dizideki İlk Eleman"+"<br>"+z;
+
+}
+
+function charNum() {
+		var no=friends[friends.length-1].length
+		document.getElementById("textview6").innerHTML="Dizideki son eleman olan "+friends[friends.length-1]+" 'in karakter sayısı "+no+" 'dur."
+}
+
+function karma() {
+
+		text="<ul>";
+		for(i=0;i<friends.length;i++){
+		text+="<li>"+friends[i]+"</li>";}
+		
+		text+="</ul>"
+		document.getElementById('textview2').innerHTML=text;
+		sayi();
+		sonDiziElemanı();
+		ilkDiziElemanı();
+		charNum();
+	
+}
+
+function sır() {
+
+		text="<ol>";
 		for(i=0;i<friends.length;i++){
 		text+="<li>"+friends[i]+"</li>";}
 		
 		text+="</ol>"
-		document.getElementById('textview2').innerHTML=text;
+		document.getElementById('textview7').innerHTML=text;
+		
 }
-//function friendsSubtraction() {}
 
-		</script>
+function sırala() {
+
+		friends.sort()
+		sır();
+
+}
+
+function sırala2() {
+
+		friends.sort();
+		friends.reverse();
+		sır();
+	
+}
+
+function ilkElemanEkle() {
+
+		var add=document.form.textview.value;
+		friends.unshift(add);	
+		karma();
+	}
+
+function friendsAdd() {
+	
+		var add=document.form.textview.value;
+		friends[friends.length]=add;  // bu yöntem ile de ekleyebiliriz 
+		// friends.push(add);		  // bu yöntem ile de ekleyebiliriz		
+		karma();
+		sırala(); // DEFAULT OLARAK A-Z ŞEKLİNDE SIRALASIN İSTEDİK
+}
+function friendsSubtraction() {
+	
+		var x=friends.pop();
+		karma();
+
+}
+function deleteText() {
+	
+		document.form.textview.value=""
+
+}
+			</script>		
 	</body>
 </html>
