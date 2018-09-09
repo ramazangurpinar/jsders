@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"  />
+<title> JavaScript'e Başlangıç! </title>
+
+</head>
+
+<body>
+<p id="result"></p>
+<button onclick="rastgele()">GÜN ÇEVİR</button>
+<button onclick="normal()">BULUNDUĞUMUZ GÜN</button>
+<script>
+
+var day,x;
+
+function rastgele() {
+
+	x= Math.floor((Math.random() * 7)); // RASTGELE GÜN ÇEVİRME 
+	gun(x);								// [0-6] ARASI SAYI döndürür
+
+}
+
+function normal() {
+
+	x=new Date().getDay(); // BULUNDUĞUMUZ GÜNÜ X değişkenine atar
+	gun(x);
+
+}
+
+function gun(par) {
+		
+		switch(par){
+			case 0: day="Today is SUNDAY"; 		break;
+			case 1: day="Today is MONDAY";		break;
+			case 2: day="Today is TUESDAY";		break;
+			case 3: day="Today is WEDNESDAY";	break;
+			case 4: day="Today is THURSDAY";	break;
+			case 5: day="Today is FRIDAY";		break;
+			case 6: day="Today is SATURDAY";	break;
+			default: day="Böyle bir gün yok";	
+			}
+
+		document.getElementById('result').innerHTML=day;
+}
+
+
+</script>
+
+</body>
+
+</html>

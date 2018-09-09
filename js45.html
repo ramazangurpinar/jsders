@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"  />
+<title> JavaScript'e Başlangıç! </title>
+
+</head>
+
+<body>
+
+
+İSİM :<input type="text" id="isim"><br>
+SOYİSİM :<input type="text" id="soyisim"><br>
+ÖĞRENCİ NO : <input type="text" id="no"><br>
+VİZE :<input type="text" id="vize"><br>
+FİNAL :<input type="text" id="final"><br>
+<button  onclick="noteResult()">SONUÇ</button>
+<p id="sonuc"></p>
+<script>
+function noteResult() {
+
+	var vizeNot,finalNot,message,avg,isim,soyisim,no;
+	
+	isim=document.getElementById('isim').value;	
+	soyisim=document.getElementById('soyisim').value;
+	no=document.getElementById('no').value;
+	vizeNot=document.getElementById('vize').value;
+	finalNot=document.getElementById('final').value;
+		avg= vizeNot*0.3 + finalNot*0.7;
+	
+	if ( isNaN(vizeNot) || isNaN(finalNot) ) {
+		
+		message="Lütfen Sayı Giriniz!";
+	
+	} else if (avg>80) {
+		
+		message=no+" numaralı , Sayın "+" "+isim+" "+soyisim+"<br>"+" ÇOK BAŞARILI BİR ÖĞRENCİSİNİZ! TEBRİKLER ..."
+	
+	} else {
+		
+		message=(avg>=60 && avg<=80) ? (no+" numaralı , Sayın "+" "+isim+" "+soyisim+"<br>"+"Dersi Geçtiniz!") : (no+" numaralı , Sayın "+isim+" "+soyisim+"<br>"+" Dersten Kaldınız!");
+	
+	}
+	
+	document.getElementById("sonuc").innerHTML=message;
+
+}
+</script>
+
+</body>
+
+</html>

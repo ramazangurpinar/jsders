@@ -15,10 +15,11 @@
 
 <script>
 
-var friends=[			
+var friends=[	
+
 			{isim:"Hasan",yas:24},
 			{isim:"Mehmet",yas:20},
-			{isim:"Zeynep",yas:18},
+			{isim:"Zeynep",yas:28},
 			{isim:"Ayşe",yas:40},
 			{isim:"Fatih",yas:48},
 			{isim:"Zehra",yas:19}
@@ -44,7 +45,7 @@ function sortArray() {
 	friends.sort(function(x,y) {
 	return x.yas-y.yas;
 
-});
+ 	});
 
 	showPC();
 	
@@ -52,17 +53,17 @@ function sortArray() {
 
 function sortArray2() {
 
-    friends.sort(function(a, b){
+    friends.sort(function(a,b){
 
-        var x = a.isim.toLowerCase();
-        var y = b.isim.toLowerCase();
+        var x = a.isim; //toLowerCase(); metodu eklenebilir
+        var y = b.isim;	//toLowerCase(); metodu eklenebilir
         
-        if (x < y) {return -1;}
+        if (x < y) {return -1;} 
         if (x > y) {return 1;}
         
         return 0;
    
-});
+	});
 
     showPC();
 
