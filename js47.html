@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"  />
+<title> JavaScript'e Başlangıç! </title>
+
+</head>
+
+<body>
+	<p id="result"></p>
+<script>
+
+var text="",i;
+
+for (i=0;i<=100;i++) { //çift sayıları bu şekilde gösterebiliriz 
+	if ((i%2)==0) {   // tek sayıları ise .. ((i%2)!=0)
+		text+=i+"<br>"
+	} 
+}
+document.getElementById('result').innerHTML=text;
+</script>
+
+</body>
+
+</html>

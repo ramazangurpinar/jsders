@@ -31,15 +31,38 @@ function normal() {
 function gun(par) {
 		
 		switch(par){
-			case 0: day="Today is SUNDAY"; 		break;
-			case 1: day="Today is MONDAY";		break;
-			case 2: day="Today is TUESDAY";		break;
-			case 3: day="Today is WEDNESDAY";	break;
-			case 4: day="Today is THURSDAY";	break;
-			case 5: day="Today is FRIDAY";		break;
-			case 6: day="Today is SATURDAY";	break;
+			
+			case 0: 
+				day="Today is SUNDAY"; 		
+			break;
+			
+			case 1: 
+				day="Today is MONDAY";		
+			break;
+			
+			case 2: 			
+				day="Today is TUESDAY";		
+			break;
+			
+			case 3: 
+				day="Today is WEDNESDAY";	
+			break;
+			
+			case 4: 
+				day="Today is THURSDAY";	
+			break;
+			
+			case 5: 
+				day="Today is FRIDAY";		
+			break;
+			
+			case 6: 
+				day="Today is SATURDAY";	
+			break;
+			
 			default: day="Böyle bir gün yok";	
-			}
+			
+		}
 
 		document.getElementById('result').innerHTML=day;
 }

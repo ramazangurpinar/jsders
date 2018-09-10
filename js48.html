@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"  />
+<title> JavaScript'e Başlangıç! </title>
+
+</head>
+
+<body>
+	<button onclick="printScreen1()">BABA</button>
+	<button onclick="printScreen2()">ANNE</button>
+	<button onclick="printScreen3()">KIZ ÇOCUK</button>
+	<button onclick="printScreen4()">ERKEK ÇOCUK</button>
+	<p id="result"></p>
+<script>
+	
+	var text="";
+	
+	var person1={
+			firstName:"Ramazan",
+			lastName:"Gürpınar",
+			age:35
+		};
+	var person2={
+			firstName:"Öznur",
+			lastName:"Gürpınar",
+			age:34
+		};
+	var person3={
+			firstName:"Yağmur",
+			lastName:"Gürpınar",
+			age:5
+		};
+	var person4={
+			firstName:"Rüzgar",
+			lastName:"Gürpınar",
+			age:1
+		};
+
+
+function printScreen1() {
+	text="";	// BU TEXTLERİ KALDIRIRSAK ALT ALTA EKLEMEYE DEVAM EDER.
+	for (x in person1) {
+		text+=person1[x]+"<br>"
+		
+		}
+	document.getElementById('result').innerHTML=text;
+}
+function printScreen2() {
+	text="";	// BU TEXTLERİ KALDIRIRSAK ALT ALTA EKLEMEYE DEVAM EDER.
+	for (x in person2) {
+		text+=person2[x]+"<br>"
+	
+		}
+	document.getElementById('result').innerHTML=text;
+}
+function printScreen3() {
+	text="";	// BU TEXTLERİ KALDIRIRSAK ALT ALTA EKLEMEYE DEVAM EDER.
+	for (x in person3) {
+		text+=person3[x]+"<br>"
+	
+		}
+	document.getElementById('result').innerHTML=text;
+}
+function printScreen4() {
+	text="";	// BU TEXTLERİ KALDIRIRSAK ALT ALTA EKLEMEYE DEVAM EDER.
+	for (x in person4) {
+		text+=person4[x]+"<br>"
+	
+		}
+	document.getElementById('result').innerHTML=text;
+}
+
+
+</script>
+
+</body>
+
+</html>
