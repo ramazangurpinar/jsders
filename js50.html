@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"  />
+<title> JavaScript'e Başlangıç! </title>
+
+</head>
+
+<body>
+<p id="result"></p>
+<p id="result2"></p>
+<p id="result3"></p>
+<p id="result4"></p>
+
+<script>
+var y=7.7244565;
+var x=y.toExponential(2);
+document.getElementById('result').innerHTML="x "+typeof x+"<br>"+"y "+typeof y;
+
+var k=" ";
+var m=Number("");
+document.getElementById('result2').innerHTML="k "+typeof Number(k)+" "+m;
+
+var a="7";
+var b=+a; // + işareti stringi number veri türüne çevirdi.
+document.getElementById('result3').innerHTML="a veri türü --> "+typeof a+" "+a+"<br>"+"b veri türü --> "+typeof b+" "+b ;
+
+var aa=new Date();
+document.getElementById('result4').innerHTML=Number(aa);
+</script>
+
+</body>
+
+</html>

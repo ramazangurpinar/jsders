@@ -7,8 +7,28 @@
 </head>
 
 <body>
+<p id="result"></p>
 <script>
-
+var friends=[
+			"HASAN",
+			"VELİ",
+			"MEHMET",
+			"MUSTAFA",
+			"ÖMER",
+			"ERSİN",
+			"KADİR"
+			]
+var text="";
+list:{
+	text+=friends[0]+"<br>";	
+	text+=friends[1]+"<br>";
+	text+=friends[2]+"<br>";
+	break list;
+	text+=friends[3]+"<br>";
+	text+=friends[4]+"<br>";
+	text+=friends[5];
+}
+document.getElementById('result').innerHTML=text;
 </script>
 
 </body>
