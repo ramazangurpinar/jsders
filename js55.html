@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"  />
+<title> JavaScript'e Başlangıç! </title>
+
+</head>
+
+<body>
+
+<form id="FrmBegin" name="FrmBegin">
+	<p>Kullanıcı Adı:<input type="text" id="username"></p>
+	<p>Kullanıcı Şifresi:<input type="text" name="password" id="password"></p>
+	<button name="btnScreen" id="btnScreen" onclick="printScreen()">TIKLA</button>
+</form>
+
+<script>
+function printScreen() {
+	var valueInput=document.forms[0].length;
+	var userInput=document.forms[0].username.value;
+	alert("SİTEMİZE HOŞGELDİNİZ\n"+userInput);
+}
+
+</script>
+
+</body>
+
+</html>

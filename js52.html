@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"  />
+<title> JavaScript'e Başlangıç! </title>
+
+</head>
+
+<body>
+	<p id="result1"></p>
+	<p id="result2"></p>
+<script>
+
+// JSON EXAMLPLE
+
+/*
+
+{
+	"friends":[
+		{"firstName":"Onur","lastName:Gültepe"},
+	    {"firstName":"Ramazan","lastName:Gürpınar"},
+	    {"firstName":"Fatih","lastName:Gürpınar"}
+	]
+}
+
+
+*/
+
+
+// JSON --> JAVASCRIPT 
+/*
+var text1='{"friends":['+
+		'{"firstName":"Onur","lastName:"Gültepe"},'+
+	    '{"firstName":"Ramazan","lastName:"Gürpınar"},'+
+	    '{"firstName":"Fatih","lastName:"Gürpınar"}'+
+	']}';
+
+var obj=JSON.parse('text1');
+document.getElementById("result1").innerHTML=obj.friends[0].firstName; */
+var text='{"person":{'+
+					'"name":"Sevde Gürpınar",'+
+					'"age":3,'+	
+					'"hobies":["watching TV","play with friends"],'+	
+					'"brothers":['+	
+								'{'+
+									'"firstName":"Hüseyin",'+	
+									'"lastName":"Gültepe",'+	
+									'"age":25'+	
+								'},'+	
+						  		    
+						  	    '{'+	
+						  			'"firstName":"Ramazan",'+	
+						  			'"lastName":"Gürpınar",'+	
+						  			'"age":21'+	
+						  		'}'+	
+					
+						  		']'+	
+		   				'}'+	
+		   	'}';	
+var obj=JSON.parse(text);
+console.log(obj.person.name);
+console.log(obj.person.age);
+console.log(obj.person.hobies[1]);
+console.log(obj.person.brothers[1].age);
+											
+
+
+		    	    
+		
+/*
+var text='{"firstName":"Onur","lastName":"Gültepe"}';
+var obj=JSON.parse(text);
+console.log(obj.firstName);
+console.log(obj.lastName);
+*/
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"  />
+<title> JavaScript'e Başlangıç! </title>
+
+</head>
+
+<body>
+
+<input type="button" onclick="boxes()" value="SİL">
+<p id="result">RAMAZAN GÜRPINAR</p>
+
+<script>
+
+function boxes() {
+
+var message;
+		
+	if (confirm("Silmek istediğinizden emin misiniz ?")==true) {
+		message="Ögeler silindi ...";
+	} else {
+		message=document.getElementById('result').innerHTML;
+	}
+document.getElementById('result').innerHTML=message;
+}
+
+
+
+</script>
+
+</body>
+
+</html>

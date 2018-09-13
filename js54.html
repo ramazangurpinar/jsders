@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"  />
+<title> JavaScript'e Başlangıç! </title>
+
+</head>
+
+<body>
+<p id="result"></p>
+<button onclick="Boxes()">TIKLA</button>
+<script>
+
+function Boxes(){
+
+	var message="";
+	var person=prompt("Lütfen Sitenizin Adını Giriniz","index.html");
+	if(person == null) {
+		window.alert("Giriş Başarısız");
+	}else if(person=="") {
+		window.alert("Giriş Başarısız");
+	}else {
+		window.open(person,"newWindow","width:400,height:300");
+	}
+	document.getElementById('result').innerHTML=message;
+}
+
+
+</script>
+
+</body>
+
+</html>
