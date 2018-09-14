@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"  />
+<title> JavaScript'e Başlangıç! </title>
+
+</head>
+
+<body>
+	<input type="number" id="number" min="1" max="7" required="">
+	<button onclick="validateFrm()">Check</button>
+	<p id="result"></p>
+<script>
+function validateFrm() {
+	var inputObject,message="";
+	inputObject=document.getElementById('number');
+
+	if (inputObject.checkValidity() == false) {
+		message=inputObject.validationMessage;
+	} else {
+		message="kontol tamam"
+	}
+		document.getElementById("result").innerHTML=message;
+}
+
+
+</script>
+
+</body>
+
+</html>

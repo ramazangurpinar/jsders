@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"  />
+<title> JavaScript'e Başlangıç! </title>
+
+</head>
+
+<body>
+<p id="result"></p>
+<script>
+function person(first,last,eye,hair,height) {
+	this.firstName=first;
+	this.lastName=last;
+	this.eyeColor=eye;
+	this.hairColor=hair;
+	this.personSize=height;
+}
+
+var mySister=new person("Sevde","Gürpınar","black","blue",80);
+var myBrother=new person("Hüseyin","Gürpınar","brown","red",180);
+document.getElementById('result').innerHTML=mySister.firstName+"\t"+mySister.personSize+"<br>"+myBrother.firstName+"\t"+myBrother.personSize;
+</script>
+
+</body>
+
+</html>

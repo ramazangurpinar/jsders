@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"  />
+<title> JavaScript'e Başlangıç! </title>
+
+</head>
+
+<body>
+<p>İSİMİ GİRİNİZ :</p><input type="text" id="text2">
+<button onclick="printScreen()">SCREEN</button>
+<button onclick="changeClr()">CHANGE</button>
+<p id="result"></p>
+<script>
+
+function changeClr() {
+	
+function person(first,last,color) {
+	this.firstName=first;
+	this.lastName=last;
+	this.eyeColor=color;
+	this.changeName=function (name) {
+		return this.firstName=name;
+	}
+}
+person.prototype.country="Turkey"
+var people = new person("Öznur","Özçelikoğlu","red");
+var chng=document.getElementById('text2').value;
+people.changeName(chng);
+document.getElementById("result").innerHTML=people.firstName+"<br>"+
+											people.lastName+"<br>"+
+											people.country;
+}
+function printScreen() {
+	
+function person(first,last,color) {
+	this.firstName=first;
+	this.lastName=last;
+	this.eyeColor=color;
+	this.changeName=function (name) {
+		return this.firstName=name;
+	}
+}
+person.prototype.country="Turkey"
+var people = new person("Öznur","Özçelikoğlu","red");
+
+document.getElementById("result").innerHTML=people.firstName+"<br>"+
+											people.lastName+"<br>"+
+											people.country;
+}
+</script>
+
+</body>
+
+</html>

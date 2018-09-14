@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"  />
+<title> JavaScript'e Başlangıç! </title>
+
+</head>
+
+<body>
+	<p id="result"></p>
+<script>
+function Person(first,last,eye,hair) {
+	this.firstName=first;	
+	this.lastName=last;
+	this.eyeColor=eye;
+	this.hairColor=hair;
+}
+Person.prototype.fullProperty=function (first,last) {
+	this.firstName=first;
+	this.lastName=last;
+	return this.firstName+" "+this.lastName+" adlı kişinin Saç ve göz rengi :"
+};
+
+var people=new Person("Yusuf","Zeki","red","black");
+document.getElementById('result').innerHTML=people.fullProperty("Ramazan","Gürpınar")+people.eyeColor+" "+people.hairColor;
+</script>
+
+</body>
+
+</html>
