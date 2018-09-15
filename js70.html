@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"  />
+<title> JavaScript'e Başlangıç! </title>
+
+</head>
+
+<body>
+	<button id="Btn">TIKLA</button>
+	<p id="result"></p>
+<script>
+document.getElementById('Btn').onclick=squareNumber;
+function squareNumber() {
+	var getNumber,sonuc;
+	getNumber=prompt("Lütfen Sayı Giriniz","..");
+	sonuc=Math.sqrt(getNumber);
+	document.getElementById("result").innerHTML=sonuc;
+}
+
+</script>
+
+</body>
+
+</html>

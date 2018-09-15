@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"  />
+<title> JavaScript'e Başlangıç! </title>
+
+</head>
+
+<body>
+	<p id="result" ></p>
+<script>
+
+var Person={
+			firstName:"Ramazan",
+			lastName:"Gürpınar",
+			age:21,
+			fullName:function () {
+				return this.firstName+" "+this.lastName;
+				}
+			};
+
+var Nesne={
+			firstName:"Hüseyin",
+			lastName:"Çelik"
+		   }
+
+x=Person.fullName.call(Nesne);
+y=Person.fullName();
+document.getElementById('result').innerHTML=x+"<br>"+y;
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"  />
+<title> JavaScript'e Başlangıç! </title>
+
+</head>
+
+<body>
+	<p id="result" ></p>
+	<button onclick="showMax(2,99,778,568,99)" >MAX NUMBER</button>
+<script>
+function showMax() {
+
+	var Max=-Infinity,i;
+
+	for (i=0;i<arguments.length ;i++) {
+		
+		if (arguments[i]>Max) {
+			Max=arguments[i];
+		} 
+	
+	}
+	document.getElementById('result').innerHTML=Max;
+}
+
+</script>
+
+</body>
+
+</html>

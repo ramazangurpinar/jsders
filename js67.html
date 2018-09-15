@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"  />
+<title> JavaScript'e Başlangıç! </title>
+
+</head>
+
+<body>
+
+<form id="formDom" >
+	<input type="text" name="txt1">
+	<input type="text" name="txt2">
+</form>
+
+<button onclick="printDom()">TIKLA</button>
+<span id="result" ></span>
+<script>
+function printDom() {
+	var findDomElement,i,message="";
+	findDomElement=document.forms["formDom"];
+	for (var i = 0; i < findDomElement.length; i++) {
+		message+=findDomElement[i].value+" ";
+	}
+	document.getElementById('result').innerHTML="<br>"+message;
+}
+
+</script>
+
+</body>
+
+</html>

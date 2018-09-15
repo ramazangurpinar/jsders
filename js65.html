@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"  />
+<title> JavaScript'e Başlangıç! </title>
+
+</head>
+
+<body>
+<p id="id1">Ramazan Gürpınar</p>
+<div id="id2"></div>
+<p name="result" >Hasan</p>
+<p name="result" >Hüseyin</p>
+<p name="result" >Veli</p>
+<p name="result" >Mehmet</p>
+<p></p>
+<p></p>
+<p></p>
+<script>
+//var findDomElemenet=document.getElementById('id1');
+//alert(findDomElemenet.innerHTML);
+
+// var findDomElemenet2=document.getElementsByTagName('result');
+// var message="",i;
+// for(i=0;i<findDomElemenet2.length;i++){
+// 	message+=findDomElemenet2[i].innerHTML+"<br>";
+// }
+// document.getElementById("id2").innerHTML=message;
+
+var findDomElemenet3=document.getElementsByTagName('p');
+var message2="";
+for (i=0;i<findDomElemenet3.length; i++) {
+	message2+=findDomElemenet3[i].innerText+"\n";
+}
+alert(message2);
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"  />
+<title> JavaScript'e Başlangıç! </title>
+
+</head>
+
+<body>
+<p class="result" >Hasan</p>
+<p class="result1" >Hüseyin</p>
+<p class="result1" >Veli</p>
+<p class="result1" >Mehmet</p>
+<p class="result2" >Mahmut</p>
+<div class="result3">Cabbar</div>
+<p>---------------</p>
+<p id="sonuc"></p>
+<p>---------------</p>
+<p id="sonuc2"></p>
+<script>
+
+var findDomElement=document.querySelector(".result");
+document.getElementById('sonuc').innerHTML=findDomElement.innerHTML;
+
+var message="",i;
+var findDomElement2=document.querySelectorAll(".result1");
+for (i=0; i<findDomElement2.length; i++) {
+	 message+=findDomElement2[i].innerHTML+"<br>";
+}
+document.getElementById('sonuc2').innerHTML=message;
+</script>
+
+</body>
+
+</html>
