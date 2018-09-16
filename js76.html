@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"  />
+<title> JavaScript'e Başlangıç! </title>
+<style >
+  p {
+      font: 60pt Tahoma;
+      color: white;
+   }
+   p:hover {
+	 font: 60pt Tahoma;
+      color: black;
+   }
+</style>
+<script>
+function changeCss() {
+	document.getElementById('yazi').style.color=white;
+}
+function mOut(object) {
+	document.getElementById('result').innerHTML="ŞİREKET İSMİ";
+}
+
+</script>
+</head>
+
+<body>
+<div style="background:url(/home/ramazan/Masaüstü/ders.js/logo/airbnb.png) no-repeat;height:510px;width:510px;padding:450px 0 0 80px"><p id="yazi" onmouseover="changeCss()">AIRBNB</p></div>
+
+
+
+</body>
+
+</html>

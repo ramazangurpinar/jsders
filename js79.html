@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"  />
+<title> JavaScript'e Başlangıç! </title>
+<style>
+	div{
+		width: 200px;
+		height: 85px;
+		background-color: yellow;
+		color:blue;
+		padding: 35px;
+	}
+</style>
+
+</head>
+
+<body>
+	<button id="btn">TARİH</button>
+	<div id="result">GÖSTER</div>
+	<script>
+		var but1=document.getElementById('btn');
+		but1.addEventListener("click",showDate);
+		function showDate() {
+			document.getElementById("result").innerHTML=Date();
+		}
+	
+</script>
+</body>
+
+</html>

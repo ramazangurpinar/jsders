@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"  />
+<title> JavaScript'e Başlangıç! </title>
+<script>
+window.onload=function () {
+		
+	var x=document.querySelector("#picture");
+	x.onmouseover=function () {
+		this.src="/home/ramazan/Masaüstü/ders.js/image/on2.png";
+	}
+	x.onmouseout=function () {
+		this.src="/home/ramazan/Masaüstü/ders.js/image/off2.png";
+	}
+
+}
+</script>
+</head>
+
+<body>
+<img src="/home/ramazan/Masaüstü/ders.js/image/off2.png" id="picture">
+
+</body>
+
+</html>
