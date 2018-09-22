@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"  />
+<title> JavaScript'e Başlangıç! </title>
+
+</head>
+
+<body>
+	<button id="Btn">TIKLA</button>
+<p id="result"></p>
+<script>
+var par1=10;	var par2=4;
+var btn=document.getElementById('Btn');
+
+btn.addEventListener("click",function () {
+	process(par1,par2);
+})
+
+btn.addEventListener("dblclick",function () {
+	process2(par1,par2);
+})
+
+btn.addEventListener("mouseover",function () {
+	process3(par1,par2);
+})
+
+btn.addEventListener("mouseout",function () {
+	process4(par1,par2);
+})
+
+function process(x,y) {
+	var sonuc=x+y;
+	document.getElementById("result").innerText=sonuc;
+}
+
+function process2(x,y) {
+	var sonuc=x*y;
+	document.getElementById("result").innerText=sonuc;
+}
+
+function process3(x,y) {
+	var sonuc=x%y;
+	document.getElementById("result").innerText=sonuc;
+}
+
+function process4(x,y) {
+	var sonuc=x-y;
+	document.getElementById("result").innerText=sonuc;
+}
+</script>
+
+</body>
+
+</html>

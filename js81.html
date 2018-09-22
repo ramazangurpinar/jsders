@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"  />
+<title> JavaScript'e Başlangıç! </title>
+<style>
+	div{
+		width: 365px;
+		height: 30px;
+		background-color: yellow;
+		color:blue;
+		padding: 5px;
+		font-size: 30px;
+	}
+</style>
+
+</head>
+
+<body>
+	<button id="btn">TIKLA</button>
+	 <input type="button" style="width: 300px" id="btn2" value="GERİ">
+	<div id="result">ALARM VERECEK!</div>
+	<script>
+		var but1=document.getElementById('btn');
+		var but2=document.getElementById('btn2');
+		but2.addEventListener("click",mClick2);
+		but2.addEventListener("mouseover",innerChange);
+		but2.addEventListener("mouseout",innerChange2);
+		but1.addEventListener("mouseover",mOver);
+		but1.addEventListener("mouseout",mOut);
+		but1.addEventListener("click",mClick);
+		
+		function innerChange() {
+			but2.value="TIKLAYABİLİRSİN";
+		}
+		function innerChange2() {
+			but2.value="TIKLAMAK İÇİN ÜZERİNE GEL";
+		}
+		function mClick() {
+		document.getElementById("result").innerHTML="TIKLADIN"
+		}
+		function mClick2() {
+		document.getElementById("result").innerHTML="ALARM VERECEK!"
+		}
+		function mOver() {
+		document.getElementById("result").innerHTML="ÜZERİNE GELDİN"
+		}
+		function mOut() {
+		document.getElementById("result").innerHTML="ÇEKİLDİN"
+		}
+	
+	
+</script>
+</body>
+
+</html>

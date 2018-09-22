@@ -16,13 +16,17 @@
 </head>
 
 <body>
-	<button id="btn">TARİH</button>
-	<div id="result">BURAYA YAZ</div>
+	<button id="btn">TIKLA</button>
+	<div id="result">ALARM VERECEK!!</div>
 	<script>
 		var but1=document.getElementById('btn');
-		but1.addEventListener("click",showDate);
-		function showDate() {
-			document.getElementById("result").innerHTML=Date();
+		but1.addEventListener("click",F1);
+		but1.addEventListener("click",F2);
+		function F1() {
+			alert("1");
+		}
+		function F2() {
+			alert("2");
 		}
 	
 </script>

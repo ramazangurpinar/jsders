@@ -23,11 +23,19 @@ function mUp(obj) {
 	obj.style.color="blue";
 	obj.innerHTML="ÇEKİLDİN";
 }
+function deneme(object) {
+	object.style.backgroundColor="blue";
+	object.style.color="yellow";
+	object.style.border="10";
+	object.style.padding="15px";
+}
 </script>
 </head>
 
 <body>
+	<!--Bu bir yorum satırı-->
 <div onmousedown="mDown(this)" onmouseup="mUp(this)"></div>
+<input type="text" name="input" onfocus="deneme(this)">
 
 </body>
 

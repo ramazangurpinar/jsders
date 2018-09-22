@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"  />
+<title> JavaScript'e Başlangıç! </title>
+
+</head>
+
+<body>
+<table>
+	<form name="FormValidate" id="FrmValidate">
+	<tr>
+		<td>
+			<label for="username">Name</label>
+		</td>
+		<td>
+			<input type="text" name="username" id="username">
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<label for="username">Surname</label>
+		</td>
+		<td>
+			<input type="text" name="surname" id="surname">
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<label for="email">E-mail</label>
+		</td>
+		<td>
+			<input type="text" name="email" id="email">
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<label for="password">Password</label>
+		</td>
+		<td>
+			<input type="password" name="pass" id="password">
+		</td>
+	</tr>
+	<tr>
+		<td>
+	<label for="city">Doğum Yeri</label>
+		</td>
+		<td>
+		<select id="cities">
+			<option value="vl1">Van</option>
+			<option value="vl2">Hakkari</option>
+			<option value="vl3">Ankara</option>
+			<option value="vl4">Kütahya</option>
+			<option value="vl5">Eskişehir</option>
+			<option value="vl6">İstanbul</option>
+			<option value="vl7">Elazığ</option>
+		</select>
+		</td>
+	</tr>
+	<tr>
+		<td>	
+	<input type="checkbox" name="accept" id="accept">
+		</td>
+		<td>
+	<label for="acceptRules">Okudum ve Sözleşmeyi Kabul Ediyorum!</label>
+		</td>
+	</tr>
+	<tr>
+		<td>
+	<button id="runSelect">Tıkla</button>
+		</td>
+	</tr>
+	<p id="result"></p>
+	</form>
+</table>
+	
+<script>
+	document.getElementById('runSelect').addEventListener("click",run);
+		function run() {
+			var control=document.getElementById("accept");
+			if (!(control.checked)) {
+				alert("Lütfen Gizlilik Sözleşmesini Okuyunuz!");
+			} else {
+				var Index=document.getElementById("cities").selectedIndex;
+				var valueSelect=document.getElementById("cities").options[Index].text;
+				var name=document.getElementById("username").value;
+				var surname=document.getElementById("surname").value;
+				var mail=document.getElementById("email").value;
+				var password=document.getElementById("password").value;
+				alert("KULLANICI BİLGİLERİ\n"+"Çok değerli kullanıcımız "+name+" "+surname+",\nDoğum Yeriniz: "+valueSelect+"\nSistemimize "+mail+" adresi ile kayıt yaptırdınız.\nŞifreniz: "+password+"\nBilgilerinizi Unutmayınız!\nBizi tercih ettiğiniz için teşekkür ederiz.");
+		}
+}
+
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"  />
+<title> JavaScript'e Başlangıç! </title>
+
+</head>
+
+<body>
+	<span id="warning"></span>
+	<button id="btn" onclick="start1()">START for GOOGLE</button>
+	<button id="btn" onclick="start2()">START for UBER</button>
+	<button id="btn" onclick="start3()">START for YOUTUBE</button>
+<script>
+	function start1() {
+	
+	var chooseID=document.getElementById('btn');
+	chooseID.style.display="none";
+
+	sayfaYonlendir("warning","https://www.google.com",10)
+	function sayfaYonlendir(ID1,Address,second) {
+		if(second==0){
+			window.location.href=Address;
+			return;
+		}
+		document.getElementById(ID1).innerText=second+" saniye kaldı...";
+		second--;
+		setTimeout(function () {
+			sayfaYonlendir(ID1,Address,second);
+		},1000);
+	}
+}
+</script>
+
+</body>
+
+</html>

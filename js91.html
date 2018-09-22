@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"  />
+<title> JavaScript'e Başlangıç! </title>
+</head>
+
+<body>
+
+<p id="result"></p>
+
+<input type="text" name="tckno" id="ID">
+
+<button onclick="tcNoControl(tcNumber)">TC KİMLİK KONTROL</button>
+
+<script>
+var tcNumber=document.getElementById('ID').value.toString();
+
+function tcNoControl(tcNumber) {
+		
+		var ciftindis=0 ,tekindis=0 ,eleventhNumber=0;
+		var i,j,k=0;
+
+		for (j=0;j<=8;j+=2){
+		ciftindis+=Number(tcNumber[j]);
+		}
+		ciftindis*=7;
+
+		for (k=1;k<=7;k+=2){
+		tekindis+=Number(tcNumber[k]);
+		}
+
+		var tenthNumber=(ciftindis-tekindis)%10;
+
+		for (i=0;i<=9;i++){
+		eleventhNumber+=Number(tcNumber[i]);
+		}
+		
+		eleventhNumber%=10;
+
+		var text=document.getElementById("result");
+		var negativeMessage2="Rakam Giriniz!";
+		var negativeMessage3="Tc No Eksik Karakter!";
+		var negativeMessage4="Tc No Fazla Karakter!";
+		var negativeMessage5="İlk Karakter 0 olamaz";
+		var negativeMessage6="Tc No Algoritma Hatası";
+
+		if ((tcNumber.length < 11) && (tcNumber.length != 9) && (tcNumber.length != 10)) {
+			text.style.color="orange";
+			text.innerHTML=negativeMessage3;
+
+		} else if(tcNumber.length > 11) {
+			text.style.color="red";
+			text.innerHTML=negativeMessage4;	
+		}
+		else if(tcNumber[0] == 0) {
+			text.style.color="purple";
+			text.innerHTML=negativeMessage5;	
+		}
+		else if(isNaN(tcNumber)) {
+			text.style.color="purple";
+			text.innerHTML=negativeMessage2;	
+		}
+		else if(tcNumber.length == 9) {
+			text.style.color="purple";
+			text.style.backgroundColor="LightBlue";
+			var tenNumber=tcNumber+tenthNumber;
+			text.innerHTML="10.HANESİ İLE BERABER: "+tenNumber;
+		}
+		else if(tcNumber.length == 10) {
+			text.style.color="purple";
+			text.style.backgroundColor="LightBlue";
+			var elevenNumber=tcNumber+eleventhNumber;
+			text.innerHTML="TC KİMLİK NUMARANIZ: "+elevenNumber;
+		}
+		else if(tcNumber.length = 11){
+
+			if (!((tcNumber[9] == tenthNumber) && (tcNumber[10] == eleventhNumber))) {
+			text.style.color="red";
+			text.style.backgroundColor="yellow";
+			text.innerHTML=negativeMessage6;
+			} else {
+			text.style.color="purple";
+			text.style.backgroundColor="LightBlue";
+			text.innerHTML="TC KİMLİK NUMARANIZ: "+tcNumber;				
+			}				
+		}
+	}
+</script>
+</body>
+</html>

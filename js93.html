@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"  />
+<title> JavaScript'e Başlangıç! </title>
+
+</head>
+
+<body>
+	<canvas id="tuval" width="700" height="440" style=" border: 2px solid red;"></canvas>
+<script>
+var tuval = document.getElementById('tuval');
+var cizim = tuval.getContext("2d");
+			cizim.beginPath();
+			cizim.moveTo(0,0);
+			cizim.lineTo(120,120);
+			cizim.lineTo(180,120);
+			cizim.moveTo(400,220)
+			cizim.arc(300,220,100,0,2*Math.PI)
+			cizim.stroke();
+
+</script>
+
+</body>
+
+</html>

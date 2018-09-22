@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"  />
+<title> JavaScript'e Başlangıç! </title>
+
+</head>
+
+<body>
+<div id="container">
+	<p id="p1">
+		ANNE
+	</p>
+	<p id="p2">
+		BABA
+	</p>
+</div>
+	<button type="button" onclick="createElementDom()">ELEMENT EKLE</button>
+	<button type="button" onclick="removeElementDom()">ELEMENTİ KALDIR</button>
+	<button type="button" onclick="replaceElementDom()">ELEMENTİ DEĞİŞTİR</button>
+<script>
+	function createElementDom() {
+		
+		var paragraf=document.createElement("p");
+		var metin=document.createTextNode("ÇOCUK");
+		var elemenetDiv=document.getElementById('container');
+		paragraf.appendChild(metin);
+		elemenetDiv.appendChild(paragraf);
+
+	}
+	
+	function removeElementDom() {
+		var parentDiv=document.getElementById('container');
+		var child=document.getElementById('p1');
+		parentDiv.removeChild(child);
+	}
+
+	function replaceElementDom() {
+		var parentDiv=document.getElementById('container');
+		var child=document.getElementById('p1');
+		var newChild=document.createElement("p");
+		var metin=document.createTextNode("YENİ ÇOCUK");
+		newChild.appendChild(metin);
+		parentDiv.replaceChild(newChild,child);
+	}
+
+</script>
+
+</body>
+
+</html>

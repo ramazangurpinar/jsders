@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"  />
+<title> JavaScript'e Başlangıç! </title>
+
+</head>
+
+<body>
+	
+	<textarea id="message" cols="40" rows="9"></textarea>
+	
+	<p id="result"></p>
+	
+<script>
+
+	var area,result,Character=180;
+	area=document.getElementById('message');
+	sonuc=document.getElementById("result");
+	area.onkeydown=characterControl;
+	area.onkeyup=characterControl;
+
+	function characterControl() {
+		var messageLength=area.value.length;
+		if (Character>=messageLength) {
+			var lastLength=Character-messageLength;
+			sonuc.innerText=lastLength+" karakter daha yazabilirsiniz...";
+		} else {
+			area.value=area.value.substr(0,Character);
+		}
+	}
+
+</script>
+
+</body>
+
+</html>
